@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        
+        <div id="app">
+            {{ message }}
+        </div>
+
+        <div id="app-2">
+           <ol>
+               <li v-for="msg in bucl">
+                 {{ msg.message }}
+               </li>
+           </ol>
+          </div>
+        <div id="autor">
+           <p> Nombre de autor {{name}}</p>
+           <p> fecha {{dt}}</p>
+        
+            <div> 
+             <img style="width:100px;height:100px" v-bind:src="imag">
+            </div>
+        </div>
+        <script src="basic.js"></script>
+    </body>
+    <script>
+
+      new Vue({
+          el: '#autor',
+          data:{
+              name: 'Desarrollo WEB',
+              dt: '15 mar 2022',
+              imag: getImage()
+          },
+
+      });
+
+    </script>
+</html>
